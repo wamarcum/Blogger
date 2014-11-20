@@ -5881,3 +5881,855 @@ Processing by ArticlesController#show as HTML
   Rendered comments/_form.html.erb (1.3ms)
   Rendered articles/show.html.erb within layouts/application (5.9ms)
 Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 17:31:44 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 112ms (Views: 99.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 17:31:45 -0600
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-19 17:31:48 -0600
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (15.1ms)
+  Rendered articles/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 75ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V+wwVTpz/y0Gwdh8b8q8GyzKzaWfeEA0EobQjUEsa+k=", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", ""], ["created_at", "2014-11-20 00:33:42.335785"], ["title", ""], ["updated_at", "2014-11-20 00:33:42.335785"]]
+  [1m[35m (97.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles/11
+Completed 302 Found in 103ms (ActiveRecord: 97.9ms)
+
+
+Started GET "/articles/11" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 11]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (2.9ms)
+  Rendered articles/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 88ms (Views: 76.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 18:33:42 -0600
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-19 18:33:45 -0600
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/10" for 127.0.0.1 at 2014-11-19 18:33:55 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 10]]
+  Rendered articles/_comment.html.erb (0.9ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTags (20141120015440)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141120015440"]]
+  [1m[36m (103.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTaggings (20141120015455)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "article_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_taggings_on_article_id" ON "taggings" ("article_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141120015455"]]
+  [1m[36m (91.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+[0m
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-19 20:11:25 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/allan/codes/Ruby/Rails/Blogger/app/models/article.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	has_many :tags, through :taggings
+	                         ^):
+  app/models/article.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/articles_controller.rb:4:in `index'
+
+
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-19 20:11:25 -0600
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/allan/codes/Ruby/Rails/Blogger/app/models/article.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	has_many :tags, through :taggings
+	                         ^):
+  app/models/article.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/articles_controller.rb:4:in `index'
+
+
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:12:13 -0600
+
+
+Started GET "/articles/10" for 127.0.0.1 at 2014-11-19 20:12:14 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 10]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  Rendered articles/_comment.html.erb (0.4ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 54ms (Views: 49.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-19 20:12:16 -0600
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (65.3ms)
+  Rendered articles/new.html.erb within layouts/application (65.9ms)
+Completed 200 OK in 112ms (Views: 111.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (11.3ms)
+  Rendered articles/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 64ms (Views: 59.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:31:02 -0600
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (2.4ms)
+  Rendered articles/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 62ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:32:21 -0600
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-11-19 20:32:50 -0600
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V+wwVTpz/y0Gwdh8b8q8GyzKzaWfeEA0EobQjUEsa+k=", "article"=>{"title"=>"Testing post two", "body"=>"Body of this post seems short.", "tag_list"=>"ruby new testing"}, "commit"=>"Create Article"}
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'ruby' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-20 02:32:50.386521"], ["name", "ruby"], ["updated_at", "2014-11-20 02:32:50.386521"]]
+  [1m[36m (132.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'new' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-20 02:32:50.522999"], ["name", "new"], ["updated_at", "2014-11-20 02:32:50.522999"]]
+  [1m[36m (113.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'testing' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-20 02:32:50.639636"], ["name", "testing"], ["updated_at", "2014-11-20 02:32:50.639636"]]
+  [1m[36m (87.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Body of this post seems short."], ["created_at", "2014-11-20 02:32:50.751262"], ["title", "Testing post two"], ["updated_at", "2014-11-20 02:32:50.751262"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("article_id", "created_at", "tag_id", "updated_at") VALUES (?, ?, ?, ?)  [["article_id", 12], ["created_at", "2014-11-20 02:32:50.752699"], ["tag_id", 1], ["updated_at", "2014-11-20 02:32:50.752699"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "taggings" ("article_id", "created_at", "tag_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["article_id", 12], ["created_at", "2014-11-20 02:32:50.753929"], ["tag_id", 2], ["updated_at", "2014-11-20 02:32:50.753929"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "taggings" ("article_id", "created_at", "tag_id", "updated_at") VALUES (?, ?, ?, ?)  [["article_id", 12], ["created_at", "2014-11-20 02:32:50.754886"], ["tag_id", 3], ["updated_at", "2014-11-20 02:32:50.754886"]]
+  [1m[36m (94.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/12
+Completed 302 Found in 522ms (ActiveRecord: 430.8ms)
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-11-19 20:32:50 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/home/allan/codes/Ruby/Rails/Blogger/app/views/articles/show.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...put_buffer.append=( link+to tag.name, tag_path(tag) );@outpu...
+...                               ^
+/home/allan/codes/Ruby/Rails/Blogger/app/views/articles/show.html.erb:5: syntax error, unexpected ')', expecting :: or '[' or '.'
+...nk+to tag.name, tag_path(tag) );@output_buffer.safe_append='
+...                               ^
+/home/allan/codes/Ruby/Rails/Blogger/app/views/articles/show.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+/home/allan/codes/Ruby/Rails/Blogger/app/views/articles/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+/home/allan/codes/Ruby/Rails/Blogger/app/views/articles/show.html.erb:18: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/show.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/articles/show.html.erb:5: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/articles/show.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/show.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-11-19 20:33:11 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 12]]
+  Rendered articles/show.html.erb within layouts/application (32.4ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (undefined method `tag_path' for #<#<Class:0x00000006247e70>:0x0000000598c4c0>):
+    2: <p>
+    3: 	Tags:
+    4: 	<% @article.tags.each do |tag| %>
+    5: 		<%= link_to tag.name, tag_path(tag) %>
+    6: 	<%end%>
+    7: </p>
+    8: <p><%=@article.body %></p>
+  app/views/articles/show.html.erb:5:in `block in _app_views_articles_show_html_erb___4416117471740883605_46945280'
+  app/views/articles/show.html.erb:4:in `_app_views_articles_show_html_erb___4416117471740883605_46945280'
+
+
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-11-19 20:34:00 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 234ms (Views: 223.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:01 -0600
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:27 -0600
+
+
+Started POST "/articles/12/comments" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V+wwVTpz/y0Gwdh8b8q8GyzKzaWfeEA0EobQjUEsa+k=", "comment"=>{"author_name"=>"Commenter", "body"=>"Epic story, bro."}, "commit"=>"Submit", "article_id"=>"12"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("article_id", "author_name", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["article_id", 12], ["author_name", "Commenter"], ["body", "Epic story, bro."], ["created_at", "2014-11-20 02:34:54.064616"], ["updated_at", "2014-11-20 02:34:54.064616"]]
+  [1m[36m (127.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/articles/12
+Completed 302 Found in 132ms (ActiveRecord: 128.2ms)
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 12]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.7ms)
+  Rendered comments/_form.html.erb (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:34:54 -0600
+
+
+Started POST "/articles/12/comments" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V+wwVTpz/y0Gwdh8b8q8GyzKzaWfeEA0EobQjUEsa+k=", "comment"=>{"author_name"=>"Anon", "body"=>"Yeah, epic story.\r\n"}, "commit"=>"Submit", "article_id"=>"12"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("article_id", "author_name", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["article_id", 12], ["author_name", "Anon"], ["body", "Yeah, epic story.\r\n"], ["created_at", "2014-11-20 02:35:15.531743"], ["updated_at", "2014-11-20 02:35:15.531743"]]
+  [1m[36m (131.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/articles/12
+Completed 302 Found in 135ms (ActiveRecord: 132.3ms)
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 12]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.5ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:35:15 -0600
+
+
+Started GET "/tags/2" for 127.0.0.1 at 2014-11-19 20:37:51 -0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" INNER JOIN "taggings" ON "articles"."id" = "taggings"."article_id" WHERE "taggings"."tag_id" = ?  [["tag_id", 2]]
+  Rendered tags/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 68ms (Views: 61.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-11-19 20:37:52 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 12]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.4ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 83ms (Views: 70.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tags/1" for 127.0.0.1 at 2014-11-19 20:37:54 -0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" INNER JOIN "taggings" ON "articles"."id" = "taggings"."article_id" WHERE "taggings"."tag_id" = ?  [["tag_id", 1]]
+  Rendered tags/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-11-19 20:37:54 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 12]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.9ms)
+  Rendered comments/_form.html.erb (6.5ms)
+  Rendered articles/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-11-19 20:43:30 -0600
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 65ms (Views: 61.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-11-19 20:43:39 -0600
+
+SyntaxError (/home/allan/codes/Ruby/Rails/Blogger/app/controllers/tags_controller.rb:8: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/tags_controller.rb:8: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-11-19 20:43:50 -0600
+
+SyntaxError (/home/allan/codes/Ruby/Rails/Blogger/app/controllers/tags_controller.rb:8: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/tags_controller.rb:8: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.9ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-11-19 20:44:03 -0600
+Processing by TagsController#index as HTML
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered tags/index.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00000004a74230>:0x00000004a5e340>):
+    3: <ul id="tags">
+    4: 	<% @tags.each do |tag| %>
+    5: 		<li>
+    6: 			<%=link_to tag.name, article_path(article) %>
+    7: 		</li>
+    8: 	<% end %>
+    9: 
+  app/views/tags/index.html.erb:6:in `block in _app_views_tags_index_html_erb__1521567412311287826_38942900'
+  app/views/tags/index.html.erb:4:in `_app_views_tags_index_html_erb__1521567412311287826_38942900'
+
+
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered tags/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 70ms (Views: 69.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:44:33 -0600
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+Processing by TagsController#index as HTML
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered tags/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 68ms (Views: 67.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:09 -0600
+
+
+Started GET "/tags/1" for 127.0.0.1 at 2014-11-19 20:46:10 -0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" INNER JOIN "taggings" ON "articles"."id" = "taggings"."article_id" WHERE "taggings"."tag_id" = ?  [["tag_id", 1]]
+  Rendered tags/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.6ms)
